@@ -13,7 +13,7 @@ pyzbar
 .. image:: https://coveralls.io/repos/github/dferens/pyzbar/badge.svg?branch=master
     :target: https://coveralls.io/github/dferens/pyzbar?branch=master
 
-Read one-dimensional barcodes and QR codes from Python 2 and 3 using the
+Read one-dimensional barcodes and QR codes from Python 3 using the
 `zbar <http://zbar.sourceforge.net/>`__ library.
 
 -  Pure python
