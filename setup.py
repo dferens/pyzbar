@@ -22,7 +22,7 @@ def readme():
 
 
 setup_data = {
-    'name': 'pyzbar',
+    'name': 'pyzbar-x',
     'version': pyzbar.__version__,
     'author': 'Lawrence Hudson',
     'author_email': 'quicklizard@googlemail.com',
