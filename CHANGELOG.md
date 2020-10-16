@@ -1,3 +1,8 @@
+### v2.0.0
+
+* dropped support of Python 2.7 and 3.4
+* added `orientation` property to `pyzbar.pyzbar.Decoded` object
+
 ### v0.1.8
 
 * #47 Python 3.7
