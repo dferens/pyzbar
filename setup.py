@@ -9,7 +9,7 @@ SCRIPTS = ['read_zbar']
 # Optional dependency
 PILLOW = 'Pillow>=3.2.0'
 
-URL = 'https://github.com/NaturalHistoryMuseum/pyzbar/'
+URL = 'https://github.com/dferens/pyzbar/'
 
 
 def readme():

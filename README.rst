@@ -2,16 +2,16 @@ pyzbar
 ======
 
 .. image:: https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7%2C%203.8%2C%203.9-blue.svg
-    :target: https://github.com/NaturalHistoryMuseum/pyzbar
+    :target: https://github.com/dferens/pyzbar
 
 .. image:: https://badge.fury.io/py/pyzbar.svg
-    :target: https://pypi.python.org/pypi/pyzbar
+    :target: https://pypi.python.org/pypi/pyzbar-x
 
-.. image:: https://travis-ci.org/NaturalHistoryMuseum/pyzbar.svg?branch=master
-    :target: https://travis-ci.org/NaturalHistoryMuseum/pyzbar
+.. image:: https://travis-ci.org/dferens/pyzbar.svg?branch=master
+    :target: https://travis-ci.org/dferens/pyzbar
 
-.. image:: https://coveralls.io/repos/github/NaturalHistoryMuseum/pyzbar/badge.svg?branch=master
-    :target: https://coveralls.io/github/NaturalHistoryMuseum/pyzbar?branch=master
+.. image:: https://coveralls.io/repos/github/dferens/pyzbar/badge.svg?branch=master
+    :target: https://coveralls.io/github/dferens/pyzbar?branch=master
 
 Read one-dimensional barcodes and QR codes from Python 2 and 3 using the
 `zbar <http://zbar.sourceforge.net/>`__ library.
@@ -206,9 +206,9 @@ Bounding boxes and polygons
 
 The blue and pink boxes show ``rect`` and ``polygon``, respectively, for
 barcodes in ``pyzbar/tests/qrcode.png`` (see
-`bounding_box_and_polygon.py <https://github.com/NaturalHistoryMuseum/pyzbar/blob/master/bounding_box_and_polygon.py>`__).
+`bounding_box_and_polygon.py <https://github.com/dferens/pyzbar/blob/master/bounding_box_and_polygon.py>`__).
 
-.. figure:: https://github.com/NaturalHistoryMuseum/pyzbar/raw/master/bounding_box_and_polygon.png
+.. figure:: https://github.com/dferens/pyzbar/raw/master/bounding_box_and_polygon.png
    :alt: Two barcodes with bounding boxes and polygons
 
 Windows error message
