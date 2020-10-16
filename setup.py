@@ -40,14 +40,12 @@ setup_data = {
         ],
     },
     'extras_require': {
-        ':python_version=="2.7"': ['enum34>=1.1.6', 'pathlib>=1.0.1'],
         'scripts': [
             PILLOW,
         ],
     },
     'tests_require': [
         # TODO How to specify OpenCV? 'cv2>=2.4.8',
-        'mock>=2.0.0; python_version=="2.7"',
         'numpy>=1.8.2',
         PILLOW,
     ],
@@ -56,13 +54,12 @@ setup_data = {
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
         'Topic :: Utilities',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
 }
 
@@ -72,7 +69,7 @@ def setuptools_setup():
     setup(**setup_data)
 
 
-if (2, 7) == sys.version_info[:2] or (3, 4) <= sys.version_info:
+if (3, 5) <= sys.version_info:
     setuptools_setup()
 else:
-    sys.exit('Python versions 2.7 and >= 3.4 are supported')
+    sys.exit('Python versions >= 3.5 are supported')

@@ -1,22 +1,22 @@
+os:
+  - linux
+
 language:
   - python
 
-sudo:
-  - required
-
 dist:
-  - xenial
+  - focal
 
 python:
-  - "2.7"
-  - "3.4"
   - "3.5"
   - "3.6"
   - "3.7"
+  - "3.8"
+  - "3.9-dev"
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y libzbar0 python-opencv
+  - sudo apt-get install -y libzbar0 python3-opencv
 
 install:
   - pip install tox-travis coveralls
