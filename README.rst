@@ -1,17 +1,17 @@
 pyzbar
 ======
 
-.. image:: https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7-blue.svg
+.. image:: https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7%2C%203.8%2C%203.9-blue.svg
     :target: https://github.com/NaturalHistoryMuseum/pyzbar
 
 .. image:: https://badge.fury.io/py/pyzbar.svg
     :target: https://pypi.python.org/pypi/pyzbar
 
-.. image:: https://travis-ci.org/NaturalHistoryMuseum/pyzbar.svg?branch=master
-    :target: https://travis-ci.org/NaturalHistoryMuseum/pyzbar
+.. image:: https://travis-ci.org/dferens/pyzbar.svg?branch=master
+    :target: https://travis-ci.org/dferens/pyzbar
 
-.. image:: https://coveralls.io/repos/github/NaturalHistoryMuseum/pyzbar/badge.svg?branch=master
-    :target: https://coveralls.io/github/NaturalHistoryMuseum/pyzbar?branch=master
+.. image:: https://coveralls.io/repos/github/dferens/pyzbar/badge.svg?branch=master
+    :target: https://coveralls.io/github/dferens/pyzbar?branch=master
 
 Read one-dimensional barcodes and QR codes from Python 2 and 3 using the
 `zbar <http://zbar.sourceforge.net/>`__ library.
@@ -20,7 +20,7 @@ Read one-dimensional barcodes and QR codes from Python 2 and 3 using the
 -  Works with PIL / Pillow images, OpenCV / numpy ``ndarray``\ s, and raw bytes
 -  Decodes locations of barcodes
 -  No dependencies, other than the zbar library itself
--  Tested on Python 2.7, and Python 3.4 to 3.7
+-  Tested on Python Python 3.5 to 3.9
 
 The older `zbar <https://sourceforge.net/p/zbar/code/ci/default/tree/python/>`__
 package is stuck in Python 2.x-land.
