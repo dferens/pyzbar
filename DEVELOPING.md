@@ -97,7 +97,7 @@ pip install wheel
     * Install the package itself
 
     ```
-    pip install --index https://testpypi.python.org/simple pyzbar
+    pip install --index https://testpypi.python.org/simple pyzbar-x
     ```
 
 5. If all is well, release to PyPI
@@ -111,5 +111,5 @@ pip install wheel
     * Install!
 
     ```
-    pip install pyzbar
+    pip install pyzbar-x
     ```

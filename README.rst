@@ -50,7 +50,7 @@ Install this Python wrapper:
 
 ::
 
-   pip install pyzbar
+   pip install pyzbar-x
 
 Example usage
 -------------
