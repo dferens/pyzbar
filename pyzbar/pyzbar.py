@@ -1,6 +1,6 @@
 from collections import namedtuple
 from contextlib import contextmanager
-from ctypes import cast, c_void_p, string_at
+from ctypes import cast, c_void_p, string_at, c_uint, c_char_p
 
 from .locations import bounding_box, convex_hull, Point, Rect
 from .pyzbar_error import PyZbarError
@@ -10,7 +10,7 @@ from .wrapper import (
     zbar_image_create, zbar_image_destroy, zbar_image_set_format,
     zbar_image_set_size, zbar_image_set_data, zbar_scan_image,
     zbar_image_first_symbol, zbar_symbol_get_data, zbar_symbol_get_orientation,
-    zbar_symbol_get_loc_size, zbar_symbol_get_loc_x, zbar_symbol_get_loc_y,
+    zbar_symbol_get_loc_size, zbar_symbol_get_loc_x, zbar_symbol_get_loc_y, zbar_symbol_xml,
     zbar_symbol_next, ZBarConfig, ZBarSymbol, ZBarOrientation, EXTERNAL_DEPENDENCIES
 )
 
@@ -88,7 +88,7 @@ def _symbols_for_image(image):
         symbol = zbar_symbol_next(symbol)
 
 
-def _decode_symbols(symbols):
+def _decode_symbols(symbols, xml=False):
     """Generator of decoded symbol information.
 
     Args:
@@ -110,14 +110,21 @@ def _decode_symbols(symbols):
         )
         orientation = ZBarOrientation(zbar_symbol_get_orientation(symbol))
         quality = zbar_symbol_get_quality(symbol)
-        yield Decoded(
-            data=data,
-            type=symbol_type,
-            rect=bounding_box(polygon),
-            polygon=polygon,
-            orientation=orientation,
-            quality=quality,
-        )
+
+        if xml:
+            xml_len_p = c_uint()
+            xml_buf = c_char_p()
+            item = zbar_symbol_xml(symbol, xml_buf, xml_len_p)
+        else:
+            item = Decoded(
+                data=data,
+                type=symbol_type,
+                rect=bounding_box(polygon),
+                polygon=polygon,
+                orientation=orientation,
+                quality=quality,
+            )
+        yield item
 
 
 def _pixel_data(image):
@@ -171,7 +178,7 @@ def _pixel_data(image):
     return pixels, width, height
 
 
-def decode(image, symbols=None):
+def decode(image, symbols=None, xml=False):
     """Decodes datamatrix barcodes in `image`.
 
     Args:
@@ -209,6 +216,6 @@ def decode(image, symbols=None):
             if decoded < 0:
                 raise PyZbarError('Unsupported image format')
             else:
-                results.extend(_decode_symbols(_symbols_for_image(img)))
+                results.extend(_decode_symbols(_symbols_for_image(img), xml))
 
     return results

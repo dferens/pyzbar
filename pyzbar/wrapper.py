@@ -285,3 +285,11 @@ zbar_symbol_next = zbar_function(
     POINTER(zbar_symbol),
     POINTER(zbar_symbol)
 )
+
+zbar_symbol_xml = zbar_function(
+    'zbar_symbol_xml',
+    c_char_p,
+    POINTER(zbar_symbol),
+    POINTER(c_char_p),
+    c_uint_p,
+)
