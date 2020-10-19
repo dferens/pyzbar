@@ -6,7 +6,7 @@ from .locations import bounding_box, convex_hull, Point, Rect
 from .pyzbar_error import PyZbarError
 from .wrapper import (
     zbar_image_scanner_set_config,
-    zbar_image_scanner_create, zbar_image_scanner_destroy,
+    zbar_image_scanner_create, zbar_image_scanner_destroy, zbar_symbol_get_quality,
     zbar_image_create, zbar_image_destroy, zbar_image_set_format,
     zbar_image_set_size, zbar_image_set_data, zbar_scan_image,
     zbar_image_first_symbol, zbar_symbol_get_data, zbar_symbol_get_orientation,
@@ -20,7 +20,7 @@ __all__ = [
 ]
 
 
-Decoded = namedtuple('Decoded', ['data', 'type', 'rect', 'polygon', 'orientation'])
+Decoded = namedtuple('Decoded', ['data', 'type', 'rect', 'polygon', 'orientation', 'quality'])
 
 # ZBar's magic 'fourcc' numbers that represent image formats
 _FOURCC = {
@@ -109,12 +109,14 @@ def _decode_symbols(symbols):
             for index in _RANGEFN(zbar_symbol_get_loc_size(symbol))
         )
         orientation = ZBarOrientation(zbar_symbol_get_orientation(symbol))
+        quality = zbar_symbol_get_quality(symbol)
         yield Decoded(
             data=data,
             type=symbol_type,
             rect=bounding_box(polygon),
             polygon=polygon,
             orientation=orientation,
+            quality=quality,
         )
 
 

@@ -274,6 +274,12 @@ zbar_symbol_get_orientation = zbar_function(
     POINTER(zbar_symbol)
 )
 
+zbar_symbol_get_quality = zbar_function(
+    'zbar_symbol_get_quality',
+    c_int,
+    POINTER(zbar_symbol)
+)
+
 zbar_symbol_next = zbar_function(
     'zbar_symbol_next',
     POINTER(zbar_symbol),

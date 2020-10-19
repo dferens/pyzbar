@@ -72,7 +72,8 @@ The ``decode`` function accepts instances of ``PIL.Image``.
                Point(x=37, y=551), Point(x=37, y=625), Point(x=361, y=626),
                Point(x=361, y=550)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
        Decoded(
            data=b'Rana temporaria', type='CODE128',
@@ -81,7 +82,8 @@ The ``decode`` function accepts instances of ``PIL.Image``.
                Point(x=4, y=1), Point(x=4, y=75), Point(x=394, y=76),
                Point(x=394, y=0)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
    ]
 
@@ -100,7 +102,8 @@ images using `OpenCV <http://opencv.org/>`__.
                Point(x=37, y=551), Point(x=37, y=625), Point(x=361, y=626),
                Point(x=361, y=550)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
        Decoded(
            data=b'Rana temporaria', type='CODE128',
@@ -109,7 +112,8 @@ images using `OpenCV <http://opencv.org/>`__.
                Point(x=4, y=1), Point(x=4, y=75), Point(x=394, y=76),
                Point(x=394, y=0)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
    ]
 
@@ -131,7 +135,8 @@ is eight bits-per-pixel.
                Point(x=37, y=551), Point(x=37, y=625), Point(x=361, y=626),
                Point(x=361, y=550)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
        Decoded(
            data=b'Rana temporaria', type='CODE128',
@@ -140,7 +145,8 @@ is eight bits-per-pixel.
                Point(x=4, y=1), Point(x=4, y=75), Point(x=394, y=76),
                Point(x=394, y=0)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
    ]
 
@@ -155,7 +161,8 @@ is eight bits-per-pixel.
                Point(x=37, y=551), Point(x=37, y=625), Point(x=361, y=626),
                Point(x=361, y=550)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
        Decoded(
            data=b'Rana temporaria', type='CODE128',
@@ -164,7 +171,8 @@ is eight bits-per-pixel.
                Point(x=4, y=1), Point(x=4, y=75), Point(x=394, y=76),
                Point(x=394, y=0)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=77,
        )
    ]
 
@@ -192,7 +200,8 @@ symbol types
                Point(x=27, y=27), Point(x=27, y=172), Point(x=172, y=172),
                Point(x=172, y=27)
            ],
-           orientation=<ZBarOrientation.UP: 0>
+           orientation=<ZBarOrientation.UP: 0>,
+           quality=1,
        )
    ]
 
