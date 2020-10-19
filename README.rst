@@ -46,13 +46,11 @@ Linux:
 
    sudo apt-get install libzbar0
 
-Install this Python wrapper; use the second form to install dependencies of the
-command-line scripts:
+Install this Python wrapper:
 
 ::
 
    pip install pyzbar
-   pip install pyzbar[scripts]
 
 Example usage
 -------------

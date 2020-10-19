@@ -4,8 +4,6 @@ import sys
 import pyzbar
 
 
-SCRIPTS = ['read_zbar']
-
 # Optional dependency
 PILLOW = 'Pillow>=3.2.0'
 
@@ -31,19 +29,8 @@ setup_data = {
     'description': pyzbar.__doc__,
     'long_description': readme(),
     'long_description_content_type': 'text/x-rst',
-    'packages': ['pyzbar', 'pyzbar.scripts', 'pyzbar.tests'],
+    'packages': ['pyzbar', 'pyzbar.tests'],
     'test_suite': 'pyzbar.tests',
-    'scripts': ['pyzbar/scripts/{0}.py'.format(script) for script in SCRIPTS],
-    'entry_points': {
-        'console_scripts': [
-            '{0}=pyzbar.scripts.{0}:main'.format(script) for script in SCRIPTS
-        ],
-    },
-    'extras_require': {
-        'scripts': [
-            PILLOW,
-        ],
-    },
     'tests_require': [
         # TODO How to specify OpenCV? 'cv2>=2.4.8',
         'numpy>=1.8.2',

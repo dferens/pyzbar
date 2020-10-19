@@ -6,7 +6,6 @@ pip install -U pip
 pip install -r requirements.pip
 
 nosetests
-python -m pyzbar.scripts.read_zbar pyzbar/tests/code128.png
 ```
 
 ### Testing python versions
@@ -89,9 +88,7 @@ pip install wheel
     pip install enum34 pathlib
     ```
 
-    * Pillow for tests and command-line programs. We can't use the
-    `pip install pyzbar[scripts]` form here because `Pillow` will not be
-    on testpypi.python.org
+    * Pillow for tests and command-line programs.
 
     ```
     pip install Pillow
@@ -101,13 +98,6 @@ pip install wheel
 
     ```
     pip install --index https://testpypi.python.org/simple pyzbar
-    ```
-
-    * Test
-
-    ```
-    read_zbar --help
-    read_zbar <path-to-image-with-barcode.png>
     ```
 
 5. If all is well, release to PyPI
@@ -121,5 +111,5 @@ pip install wheel
     * Install!
 
     ```
-    pip install pyzbar[scripts]
+    pip install pyzbar
     ```
