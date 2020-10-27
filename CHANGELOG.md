@@ -1,3 +1,10 @@
+### v0.2.1
+
+* added `xml=True/False` keyword arg to `pyzbar.pyzbar.decode(...)`
+* added `quality` property to `pyzbar.pyzbar.Decoded` object
+* fixed Windows wheels did not include dlls 
+* removed `read_zbar` script
+
 ### v0.2.0
 
 * dropped support of Python 2.7 and 3.4
