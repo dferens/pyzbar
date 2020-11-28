@@ -1,5 +1,14 @@
-pyzbar
+pyzbar-x
 ======
+Original `pyzbar <https://github.com/NaturalHistoryMuseum/pyzbar>`_ is not supported anymore, so I made this fork.
+
+Differences:
+ - only python 3 support (see supported versions below)
+ - additional properties on `Decoded` object
+ - use ``decode(xml=True)`` to get xml directly from underlying `zbar_symbol_xml <https://github.com/mchehab/zbar/blob/6424e8df84935fe10ef2be9c689760ebbb229d16/zbar/symbol.c#L294>`_ , in case bindings will get outdated
+ - removed `read_zbar` script
+
+----
 
 .. image:: https://img.shields.io/badge/python-3.5%2C%203.6%2C%203.7%2C%203.8%2C%203.9-blue.svg
     :target: https://github.com/dferens/pyzbar
